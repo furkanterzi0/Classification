@@ -15,7 +15,7 @@ data = pd.read_csv('data.csv')
 
 x = data.iloc[:,:3].values
 y = data.iloc[:,-1:].values
-y = y.ravel() #Bu, y değişkenini beklenen 1D formata getirecek ve uyarıyı ortadan kaldıracaktır.
+y = y.ravel()
 
 x_train, x_test, y_train, y_test = train_test_split(x,y,train_size=0.30,random_state=2)
 

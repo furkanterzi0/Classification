@@ -10,7 +10,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix,accuracy_score
 
 data = pd.read_csv('data.csv')
 
@@ -33,3 +33,5 @@ y_pred = svc.predict(x_test_sc)
 
 cm = confusion_matrix(y_test, y_pred)
 print(cm)
+
+print("accuracy score : ", accuracy_score(y_test, y_pred))

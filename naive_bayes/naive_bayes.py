@@ -29,9 +29,8 @@ x_test_sc = sc.transform(x_test)
 bnb = BernoulliNB()
 bnb.fit(x_train_sc, y_train)
 
-y_pred = bnb.predict(x_train_sc)
-
 y_pred = bnb.predict(x_test_sc)
+
 cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:\n",cm)
 

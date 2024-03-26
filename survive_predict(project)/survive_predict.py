@@ -4,13 +4,6 @@ Created on Tue Mar 26 01:58:05 2024
 
 @author: terzi
 """
-
-# naive bayes
-# logistic
-# rassal orman
-# genderi labelencode yap
-# age ve embarekd impute
-
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, StandardScaler, OneHotEncoder
@@ -34,7 +27,6 @@ x = pd.concat([x, pd.DataFrame(embarked_ohe.toarray(), columns=["Embarked_" + st
 
 y = data[["Survived"]]
 y = np.ravel(y)
-
 
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.3,random_state=6)
 
@@ -93,11 +85,7 @@ person_sc = sc.transform(person)
 y_pred_survive = log_reg.predict(person_sc)
 print("Predicted Survived:", y_pred_survive)
 
-
-
-
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
-
 
 

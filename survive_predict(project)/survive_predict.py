@@ -36,8 +36,8 @@ sc.fit(x_train)
 x_train_sc = sc.transform(x_train)
 x_test_sc = sc.transform(x_test)
 
-from sklearn.naive_bayes import GaussianNB 
-bnb = GaussianNB().fit(x_train_sc, y_train)
+from sklearn.naive_bayes import BernoulliNB 
+bnb = BernoulliNB().fit(x_train_sc, y_train)
 y_pred_nb = bnb.predict(x_test_sc)
 
 print("naive bayes \n",confusion_matrix(y_test, y_pred_nb))
